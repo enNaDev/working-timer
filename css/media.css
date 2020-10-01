@@ -1,0 +1,50 @@
+@media only screen and (max-width: 810px) {
+  p {
+    width: 80%;
+    text-align: justify;
+    text-align: center;
+    margin: auto;
+  }
+  .wrapper,
+  .setting__buttons,
+  .time__box {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .setting__buttons {
+    width: 100%;
+    margin-top: 70px;
+  }
+  .time__box {
+    width: 300px;
+    border-radius: 50%;
+  }
+  .time__box-add {
+    transform: translate(-85%, -50%);
+    box-shadow: none;
+  }
+  .time__box-substract {
+    transform: translate(85%, -50%);
+    box-shadow: none;
+  }
+  .timer-container {
+    width: 100%;
+    margin: 100px 0 20px;
+  }
+  .settings__message {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  .main__container {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1680px) {
+  .main__container {
+    width: 60%;
+  }
+}

@@ -1,0 +1,201 @@
+body {
+  color: #fef8e7;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4em;
+	background: linear-gradient(-45deg, #000000, #999494, #870707, #000000);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.main__container {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+.headings {
+  text-align: center;
+}
+.clock__icon {
+  width: 20.5px;
+  height: auto;
+}
+/* Buttons for setting the timer */
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.setting__buttons {
+  width: 35%;
+  margin-top: 1em;
+}
+.time__box {
+  position: relative;
+  text-align: center;
+  width: 360px;
+  height: 140px;
+  margin-bottom: 1em;
+  background-color: transparent;
+  box-shadow: 4px 10px 10px -5px #333;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.time__box-icon {
+  width: 40px;
+  height: 30px;
+  margin-top: 0.8em;
+}
+.time__box-button {
+  overflow: visible;
+  outline: none;
+}
+.time__box-button:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: rgba(34,81,112,0.3);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+.time__box-button:focus:not(:active)::after {
+  animation: circleGrow .4s ease-out;
+}
+@keyframes circleGrow {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(2, 2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(4, 4);
+    opacity: 0.7;
+  }
+  80% {
+    transform: scale(5, 5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(5.5, 5.5);
+    opacity: 0;
+  }
+}
+.time__box-substract,
+.time__box-add,
+.time__box-digits {
+  color: #fff;
+  font-size: 1.4em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.time__box-substract,
+.time__box-add {
+  position: absolute;
+  top: 50%;
+  margin-top: 0;
+  padding: 4px 15px;
+  width: 50px;
+  border: 0;
+  border-radius: 20px;
+  background-color: transparent;
+  box-shadow: 4px 10px 10px -5px #333;
+  cursor: pointer;
+}
+.time__box-substract {
+  left: 0;
+  transform: translate(100%, -50%);
+}
+.time__box-add {
+  top: 50%;
+  right: 0;
+  transform: translate(-100%, -50%);
+}
+.time__box-digits {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  font-size: 1.6em;
+
+}
+/* Timer */
+.timer-container {
+  width: 35%;
+}
+.clock-container {
+  max-width: 100%;
+  min-height: 220px;
+  position: relative;
+}
+.clock-session {
+  width: 100%;
+  text-align: center;
+  margin: 1em auto 0;
+  font-weight: 300;
+  color: #fef8e7;
+  letter-spacing: 1px;
+}
+.clock-session__count {
+  width: 130px;
+  text-align: center;
+  margin: 0 auto 0.6em;
+  padding-bottom: 10px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  color: #fef8e7;
+  border-bottom: 1px solid #fef8e7;
+}
+.clock-time {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3em;
+  font-weight: 300;
+  color: #fef8e7;
+}
+.play__pause__reset__buttons {
+  position: relative;
+}
+.clock__btn__play,
+.clock__btn__pause,
+.clock__btn__reset {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+}
+.clock__btn__play {
+  background-image: url(../images/play_btn.svg);
+  left: calc(50% - 68px);
+}
+.clock__btn__pause {
+  background-image: url(../images/pause_btn.svg);
+  top: 1.3em;
+  left: calc(50% - 20px);
+}
+.clock__btn__reset {
+  background-image: url(../images/restart_btn.svg);
+  left: calc(50% + 28px);
+}

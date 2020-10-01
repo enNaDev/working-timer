@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/media.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
+  <title>Productivity timer</title>
+</head>
+<body>
+  <div class="main__container">
+    <div class="headings">
+      <h1>W<img class="clock__icon" src="images/clock.svg"></span>rk and then have your coffee</h1>
+      <p>Set your working time and then get your break after reaching your goal...</p>
+    </div>
+    <div class="wrapper">
+      <div class="setting__buttons">
+        <div class="time__box">
+          <img class="time__box-icon" src="images/laptop.svg" alt="work icon"></span>
+          <button class="time__box-button time__box-substract" data-work-btn="-">-</button>
+          <span id="workMinutes" class="time__box-digits">25m</span>
+          <button class="time__box-button time__box-add" data-work-btn="+">+</button>
+        </div>
+        <div class="time__box">
+          <img src="images/bean.svg" class="time__box-icon" alt="break icon"></span>
+          <button class="time__box-button time__box-substract" data-break-btn="-">-</button>
+          <span id="breakMinutes" class="time__box-digits">5m</span>
+          <button class="time__box-button time__box-add" data-break-btn="+">+</button>
+        </div>
+      </div>    
+      <div class="timer-container">
+        <div class="clock-container">
+          <h2 class="clock-session">Work</h2>
+          <h4 class="clock-session__count">Session 1</h4>
+          <div class="clock-time">25:00</div>
+          <div class="play__pause__reset__buttons">
+            <button class="clock__btn__play"></button>
+            <button class="clock__btn__pause"></button>
+            <button class="clock__btn__reset"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
