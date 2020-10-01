@@ -1,4 +1,4 @@
-# Custom timer for setting time intervals both for working and having breaks as well
+## Custom timer for setting time intervals both for working and having breaks as well
 
 #### Live Demo: https://ennadev.github.io/working-timer/
 
